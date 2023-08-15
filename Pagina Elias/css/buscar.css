@@ -1,0 +1,219 @@
+/* parte del menu */
+.header {
+  font-family: "Montserrat", sans-serif;
+  background-color: #f2a649;
+}
+
+.header img {
+  width: 120px;
+}
+
+body {
+  background-color: #fafafa;
+  color: #000000;
+  font-family: "Montserrat", sans-serif;
+}
+
+
+.container__title {
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  color: #733B2F;
+  font-style: italic;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+
+
+
+/* separacion */
+.container__titulosPrincipales {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #733B2F;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.container__iconos {
+  padding-bottom: 1rem;
+}
+
+.container__iconos a,
+.footer__iconos a {
+  margin: 0.7rem;
+}
+
+.container__iconos a img,
+.footer__iconos a img {
+  width: 3rem;
+}
+
+
+/* Contacto */
+@media all and (min-width: 992px) {
+  .container__title h1 {
+    font-size: 2.5rem;
+  }
+  .container__iconos {
+    display: none;
+  }
+  .cuadroPrincipal p,
+  ul {
+    font-size: 18px;
+  }
+}
+
+/*Barra navegacion de abajo*/
+.footer {
+  background-color: #f2a649;
+  color: #fafafa;
+  width: 100%;
+}
+
+.footer .footer__title {
+  color: #fafafa;
+}
+
+.footer .footer__title:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  color: white;
+}
+
+.footer .footer__iconos {
+  display: none;
+}
+
+.footer .footer__iconos a:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
+.footer ul {
+  display: none;
+}
+/* Contacto */
+@media all and (min-width: 992px) {
+  .footer .footer__iconos {
+
+    display: flex;
+  }
+  .footer img {
+    width: 50px;
+  }
+  .footer ul {
+    display: flex;
+  }
+}
+
+/*boton de buscar xd*/
+.btn {
+  font-family: "Montserrat", sans-serif;
+  color: #fafafa;
+  background-color: #733B2F;
+
+  outline: none;
+  border-style: none;
+
+}  
+
+.btn:hover {
+  background-color: orange;
+  border-color: #f2a649;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0.2rem #f2a649;
+          box-shadow: 0 0 0 0.2rem #f2a649;
+}
+
+.btn:focus {
+  border-color: #ff8080;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0.2rem #733B2F;
+          box-shadow: 0 0 0 0.2rem #733B2F;
+}
+
+
+/* Filtros de busqueda */
+.filtrosForm {
+
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.filtrosForm input {
+  width: 60%;
+
+  display: flex;
+  font-size: 0.7rem;
+  padding: 10px;
+  margin: 1rem auto;
+}
+
+.filtroSelect {
+
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+/* Buscar */
+.filtrosForm a {
+
+  display: flex;
+  width: fit-content;
+  margin: auto;
+}
+/*Resultados*/
+.cardHead {
+  color: #fafafa;
+  background-color: rgba(0, 0, 0, 0.459);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.3em 1em;
+}
+
+.cardHead__title h5 {
+  margin: 0;
+}
+
+/*Cuadro de perros*/
+.card2 {
+  background-image: url("../media/adopciones/perro2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 30vh;
+}
+
+/* efecto en imagen */
+.card2:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-box-shadow: 2px 15px 30px 0px rgba(0, 0, 0, 0.4);
+          box-shadow: 2px 15px 30px 0px rgba(0, 0, 0, 0.4);
+}

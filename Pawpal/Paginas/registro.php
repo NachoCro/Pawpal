@@ -55,7 +55,7 @@
                       if (isset($_POST['boton'])) {
                         if (!empty($_POST["nombre"]) && !empty($_POST["cp"]) && !empty($_POST["correo"]) && !empty($_POST["pass"]) && !empty($_POST["tel"])) {
                           
-                          include("../abrirconexion.php");
+                          include("abrirconexion.php");
                           
                           function validar($dato){
                             $dato = trim($dato);

@@ -51,7 +51,7 @@
                   
                   <?php 
 
-                  include("../abrirconexion.php");
+                  include("abrirconexion.php");
       
                     if(!empty($_POST['correo']) && !empty($_POST['contrasenia'])){
 

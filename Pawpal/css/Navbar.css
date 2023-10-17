@@ -1,0 +1,171 @@
+:root {
+    --naranja-pastel: #f2ca80;
+    --naranja: #f2a649;
+    --marron-claro: #733b2f;
+    --marron: #401e1b;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+.logo {
+    width: 100px;
+}
+
+.perfil {
+    height: 30px;
+    width: 40px;
+    padding-right: 10px;
+}
+
+.logo:hover {
+    -webkit-transition: 1.5s;
+    transition: 1.5s;
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn);
+}
+
+.mas {
+    margin: 0px 20px;
+    float: right;
+    height: 30px;
+    width: 30px;
+    background: url(../assets/icons/mas.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+nav {
+    background-color: var(--naranja);
+    height: 75px;
+    width: 100%;
+    padding: 10px 0;
+    /* Espacio interno arriba y abajo */
+    display: flex;
+    position:fixed;
+    justify-content: space-between;
+    /* Centrar contenido horizontalmente */
+    align-items: center;
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 100;
+    z-index: 100;
+}
+
+@media (max-width: 1150px) {
+
+    nav ul {
+        float: right;
+        position: fixed;
+        width: 100%;
+        background-color: var(--naranja-pastel);
+        top: 75px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li {
+        display: block;
+        width: 100%;
+        line-height: 75px;
+        margin: 5px;
+    }
+
+    li a:active,
+    li a:hover {
+        background: var(--naranja);
+        transition: 0.5s;
+    }
+}
+
+
+nav ul li a {
+    color: var(--marron);
+    font-size: 1.2rem;
+    padding: 7px 12px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+li a:active,
+li a:hover {
+    background: var(--naranja-pastel);
+    transition: 0.5s;
+}
+
+#check {
+    display: none;
+}
+
+#check:checked~ul {
+    left: 0;
+}
+
+/* Estilos de la barra de búsqueda */
+.search-bar {
+    display: flex;
+    width: 600px;
+    border: 1px solid var(--marron);
+    /* Borde de la barra de búsqueda */
+    border-radius: 20px;
+    /* Radio de las esquinas */
+    overflow: hidden;
+}
+
+.search-bar input {
+    background-color: var(--naranja-pastel);
+    border: none;
+    padding: 10px;
+    width: 100%;
+    /* Ancho de la caja de búsqueda */
+    font-size: 16px;
+    outline: none;
+    /* Eliminar el borde de enfoque */
+}
+
+.search-bar button {
+    background-color: var(--marron);
+    /* Color del botón de búsqueda */
+    color: var(--naranja-pastel);
+    /* Color del texto del botón de búsqueda */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    outline: none;
+    /* Eliminar el borde de enfoque */
+}
+
+/* Estilos del icono de búsqueda (puedes usar FontAwesome o cualquier otra fuente de iconos) */
+.search-bar button i {
+    font-size: 18px;
+}
+
+@media (min-width:1150px) {
+    .mas {
+        display: none;
+    }
+
+    nav ul li {
+        display: inline-block;
+        width: max-content;
+    }
+
+    .nav_menu{
+        display: flex;
+        text-align: center;
+    }
+    .nav ul {
+        margin: 0 10px;
+    }
+}

@@ -6,16 +6,56 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PawPal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="shortcut icon" href="../assets/icons/pawpal_logo.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../css/Navbar.css">
   <link rel="stylesheet" href="../css/color.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
 
 <body>
 
+  <nav>
+
+    <!-- icono -->
+
+    <a href="#">
+      <img src="../assets/icons/pawpal_logo.ico" alt="" class="logo">
+    </a>
+
+    <!-- barra de búsqueda -->
+
+    <form action="post" class="search-bar">
+      <input type="text" placeholder="Buscar en Pawpal">
+      <button><i class="fa fa-search"></i></button>
+    </form>
+
+    <!-- menu -->
+
+    <input type="checkbox" id="check">
+    <label for="check">
+      <div class="mas"></div>
+    </label>
+
+    <ul class="nav_menu">
+      <li class="menu_inicio"><a href="../index.html">Inicio</a></li>
+      <li class="menu_publicaciones"><a href="buscar.html">Publicaciones</a></li>
+      <li class="menu_opciones"><a href="publicar.html">Publicar</a></li>
+    </ul>
+
+    <!-- usuario -->
+
+    <a href="perfil.html">
+      <img src="../assets/icons/peon.webp" alt="" class="perfil">
+    </a>
+  </nav>
+
   <!-- Section: Design Block -->
   <section class="background-radial-gradient overflow-hidden">
     <!-- verifica que existe -->
-    
+
 
     <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
       <div class="row gx-lg-5 align-items-center mb-5">
@@ -48,62 +88,59 @@
                   Inicio de sesion
                 </h3>
                 <form action="inicio.php" method="post">
-                  
-                  <?php 
+
+                  <?php
 
                   include("abrirconexion.php");
-      
-                    if(!empty($_POST['correo']) && !empty($_POST['contrasenia'])){
 
-                      function validar($dato){
-                        $dato = trim($dato);
-                        $dato = stripslashes($dato);
-                        $dato = htmlspecialchars($dato);
-                        return $dato;
-                      }
+                  if (!empty($_POST['correo']) && !empty($_POST['contrasenia'])) {
 
-                      $correo = validar($_POST['correo']);
-                      $pass = validar($_POST['contrasenia']);
-                      $datos = mysqli_query($conexion, "SELECT Contrasenia, Correo FROM $usuario WHERE Correo = '$correo'");
-                      $cantidad_de_correos = mysqli_num_rows($datos);
-        
-                      if($cantidad_de_correos>0){
+                    function validar($dato)
+                    {
+                      $dato = trim($dato);
+                      $dato = stripslashes($dato);
+                      $dato = htmlspecialchars($dato);
+                      return $dato;
+                    }
 
-                        $row = mysqli_fetch_assoc($datos);
-                        $password_bd = $row['Contrasenia'];
+                    $correo = validar($_POST['correo']);
+                    $pass = validar($_POST['contrasenia']);
+                    $datos = mysqli_query($conexion, "SELECT Contrasenia, Correo FROM $usuario WHERE Correo = '$correo'");
+                    $cantidad_de_correos = mysqli_num_rows($datos);
 
-                        $password = md5($pass);
+                    if ($cantidad_de_correos > 0) {
 
-                        if($password_bd == $password){
+                      $row = mysqli_fetch_assoc($datos);
+                      $password_bd = $row['Contrasenia'];
 
-                          $_SESSION['Correo'] = $row['correo'];
-                          $_SESSION['Contrasenia'] = $row['contrasenia'];
-                          header("Location: ../index.html");
+                      $password = md5($pass);
 
-                        } else {
+                      if ($password_bd == $password) {
 
-                          echo 
-                          "
-                          <div class=\"form-outline mb-4 --bs-danger-bg-subtle text-danger-emphasis\">
-                          La contraseña o el correo es incorrecto
-                          </div>
-                          ";
+                        $_SESSION['Correo'] = $row['correo'];
+                        $_SESSION['Contrasenia'] = $row['contrasenia'];
+                        header("Location: ../index.html");
+                      } else {
 
-                        }
-
-                      }else{
-
-                        echo 
+                        echo
                         "
                           <div class=\"form-outline mb-4 --bs-danger-bg-subtle text-danger-emphasis\">
                           La contraseña o el correo es incorrecto
                           </div>
-                        ";
-                          
+                          ";
                       }
-                    }
+                    } else {
 
-                    mysqli_close($conexion);
+                      echo
+                      "
+                          <div class=\"form-outline mb-4 --bs-danger-bg-subtle text-danger-emphasis\">
+                          La contraseña o el correo es incorrecto
+                          </div>
+                        ";
+                    }
+                  }
+
+                  mysqli_close($conexion);
                   ?>
 
                   <!-- Email input -->
@@ -146,7 +183,7 @@
         </div>
       </div>
     </div>
-    
+
 
 
   </section>

@@ -49,20 +49,23 @@ body {
   font-size: 1.2rem;
   margin-bottom: 1rem;
 }
+
 /* Contenedor de los iconos */
-.container__iconos {
+.contenedor_iconos {
   padding-bottom: 1rem;
 }
 
-.container__iconos a,
-.footer__iconos a {
+.contenedor_iconos a,
+.footer_iconos a {
   margin: 0.7rem;
 }
 
-.container__iconos a img,
-.footer__iconos a img {
+.contenedor_iconos a img,
+.footer_iconos a img {
   width: 3rem;
 }
+
+
 
 /* Estilos para la sección de contacto y cuadro principal */
 @media all and (min-width: 992px) {
@@ -177,7 +180,7 @@ body {
 
 /* Fotos al lado del icono de selecionar imagen */
 .imagenPrincipal {
-  max-width: 100%;
+  width: 100%;
   margin: 10px 0;
 }
 

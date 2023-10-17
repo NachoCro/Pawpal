@@ -163,12 +163,11 @@
 /* Datos de la mascota */
 .listaDatos {
   text-align: left;
-
+  color: #000;
   display: flex;
 }
 
 .listaDatos__cuadro {
-
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;

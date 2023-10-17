@@ -1,3 +1,10 @@
+:root {
+  --naranja-pastel: #f2ca80;
+  --naranja: #f2a649;
+  --marron-claro: #733b2f;
+  --marron: #401e1b;
+}
+
 /* parte del menu */
 .header {
   font-family: "Montserrat", sans-serif;
@@ -68,7 +75,7 @@ body {
   }
 }
 
-/*Barra navegacion de abajo*/
+/*Barra navegación de abajo*/
 .footer {
   background-color: #f2a649;
   color: #fafafa;
@@ -115,7 +122,7 @@ body {
   }
 }
 
-/*boton de buscar xd*/
+/*botón de buscar xd*/
 .btn {
   font-family: "Montserrat", sans-serif;
   color: #fafafa;
@@ -142,7 +149,7 @@ body {
 }
 
 
-/* Filtros de busqueda */
+/* Filtros de búsqueda */
 .filtrosForm {
 
   display: flex;
@@ -202,7 +209,7 @@ body {
 
 /*Cuadro de perros*/
 .card2 {
-  background-image: url("../media/adopciones/perro2.jpg");
+  background-image: url("../assets/img/perro7.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 30vh;
@@ -216,4 +223,8 @@ body {
   transition: 0.6s;
   -webkit-box-shadow: 2px 15px 30px 0px rgba(0, 0, 0, 0.4);
           box-shadow: 2px 15px 30px 0px rgba(0, 0, 0, 0.4);
+}
+
+h4{
+  color: var(--marron);
 }

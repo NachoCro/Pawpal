@@ -1,18 +1,14 @@
-/* logo y barra de navegacion */
-.header {
-  font-family: "Montserrat", sans-serif;
-  background-color: #f2a649;
+:root {
+  --naranja-pastel: #f2ca80;
+  --naranja: #f2a649;
+  --marron-claro: #733b2f;
+  --marron: #401e1b;
 }
 
-.header img {
-  width: 120px;
+a{
+  text-decoration: none;
 }
-.header img:hover {
-  -webkit-transition: 3s;
-  transition: 3s;
-  -webkit-transform: rotate(1turn);
-  transform: rotate(1turn);
-}
+
 @media all and (min-width: 992px) {
   .contenedor_titulo h1 {
     font-size: 2.5rem;
@@ -29,7 +25,7 @@
 .container {
   color: #fafafa;
   font-family: "Montserrat", sans-serif;
-  padding: 20px;
+  padding-top: 70px;
 }
 
 .contenedor2 {
@@ -45,6 +41,7 @@
   -ms-flex-pack: center;
   justify-content: center;
   font-family: "Montserrat", sans-serif;
+  font-weight: 700;
   color: #733B2F;
   font-style: italic;
   margin-top: 1rem;
@@ -65,7 +62,6 @@
 .footer_iconos a img {
   width: 3rem;
 }
-
 
 /* contacto */
 @media all and (min-width: 992px) {
@@ -119,7 +115,6 @@
 /* Contacto */
 @media all and (min-width: 992px) {
   .footer .footer_iconos {
-
     display: flex;
   }
 
@@ -161,14 +156,14 @@
 
 /*imagen de las 3 paginas*/
 .imagen1 {
-  background-image: url("../media/info1.png");
+  background-image: url("../assets/img/michi3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .imagen2 {
-  background-image: url("../media/info2.png");
+  background-image: url("../assets/img/perro7.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -190,7 +185,7 @@
       }
 
       .card-title {
-        color: #733B2F;
+        color: var(--naranja-pastel);
         padding: 0.5rem;
       }
 
